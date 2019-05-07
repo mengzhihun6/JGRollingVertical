@@ -1,0 +1,58 @@
+//
+//  PrefixHeader.pch
+//  JGRollingVertical
+//
+//  Created by 郭军 on 2019/5/6.
+//  Copyright © 2019 ZYWL. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "UIColor+JGHexColor.h"
+#import "UIView+JGExtension.h"
+
+
+
+
+/***********************  快速设置  *************************/
+#define JGFont(size) [UIFont systemFontOfSize:size] //字体尺寸
+#define JGBoldFont(size1) [UIFont fontWithName:@"Helvetica-Bold" size:size1] //加粗字体尺寸
+
+
+
+/*************************  颜色  *********************************/
+//颜色定义
+#define JGRGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define JGRandomColor   JGRGBColor(arc4random_uniform(255),arc4random_uniform(255),arc4random_uniform(255))
+
+//主色调
+#define JGMainColor [UIColor colorWithHexCode:@"#ff0036"]
+#define JG333Color [UIColor colorWithHexCode:@"#333333"]
+#define JG666Color [UIColor colorWithHexCode:@"#666666"]
+#define JG999Color [UIColor colorWithHexCode:@"#999999"]
+//分割线颜色
+#define JGLineColor [UIColor colorWithHexCode:@"#efefef"]
+
+
+
+
+
+
+
+/*******************************  尺寸  ***********************************/
+#define kDeviceHight [UIScreen mainScreen].bounds.size.height
+#define kDeviceWidth [UIScreen mainScreen].bounds.size.width
+
+//iphoneX 适配
+#define SJHeight ([[UIApplication sharedApplication] statusBarFrame].size.height > 20 ? 86 : 64)  //导航栏高度
+#define IphoneXHeight ([[UIApplication sharedApplication] statusBarFrame].size.height > 20 ? 22 : 0)  //导航栏增加高度
+#define IphoneXTabbarH ([[UIApplication sharedApplication] statusBarFrame].size.height > 20 ? 83 : 49)  //tabbar高度
+#define IphoneXTH ([[UIApplication sharedApplication] statusBarFrame].size.height > 20 ? 34 : 0)  //tabbar增加高度
+
+
+
+#endif /* PrefixHeader_pch */
